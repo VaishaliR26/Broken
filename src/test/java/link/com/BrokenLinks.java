@@ -24,7 +24,7 @@ public class BrokenLinks {
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
-		driver.get("https://www.amazon.in/");
+		driver.get("https://www.instagram.com/");
 		
 		List<WebElement> links = driver.findElements(By.tagName("a"));
 		
@@ -49,14 +49,14 @@ public class BrokenLinks {
 		
 		if(code==200) {
 			
-			System.out.println("Valid Link--->"+code+"----->"+msg);
+			System.out.println("Valid Link--->"+url+"----->"+code+"----->"+msg);
 			
 			validlinkcount++;
 		}
 		
 		else {
 			
-			System.out.println("Broken Link---->"+code+"---->"+msg);
+			System.out.println("Broken Link---->"+url+"---->"+code+"---->"+msg);
 			
 			brokenlinkcount++;
 		}
